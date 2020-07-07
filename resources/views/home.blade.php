@@ -9,7 +9,7 @@
 
         <div class="col-9 pt-5">
             <div>
-                <h1>Official Account of Big Ben</h1>
+                <h1>{{ $user->username }}</h1>
             </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>3</strong> posts</div>
