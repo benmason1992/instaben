@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
@@ -26,6 +27,7 @@ class PostsController extends Controller
 
         $imagePath = request('image')->store('uploads', 'public');
 
+        
         $user = Auth::user();
         $user->posts()->create([
             'caption' => $data['caption'],
