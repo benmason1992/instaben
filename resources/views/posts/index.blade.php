@@ -18,9 +18,14 @@
                 <p>
                     <span class="font-weight-bold">
                         <a href="/profile/{{ $post->user->id }}">
+                            <img src="{{ $post->user->profile->profileImage() }}" class="w-100 rounded-circle" style="max-width: 40px;">
+                        </a>
+                        <a href="/profile/{{ $post->user->id }}">
                             <span class="text-dark">{{ $post->user->username }}</span>
                         </a>
-                    </span> {{ $post->caption }}</p>
+                    </span>
+                    {{ $post->caption }}
+                </p>
             </div>
         </div>
 
